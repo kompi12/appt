@@ -6,9 +6,6 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import ListSubheader from '@mui/material/ListSubheader';
-import IconButton from '@mui/material/IconButton';
-import InfoIcon from '@mui/icons-material/Info';
-import PopUpComponent from './PopUpComponent';
 import {
   DialogProps,
   Button,
@@ -19,7 +16,6 @@ import {
   DialogActions,
 } from '@mui/material';
 import React from 'react';
-import FoodComponent from './FoodComponent';
 import Link from 'next/link';
 import useSWR from 'swr';
 
