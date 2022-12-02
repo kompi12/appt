@@ -30,7 +30,7 @@ export interface Objekt {
 
 export default function MiddleComponent() {
   const [open, setOpen] = React.useState(false);
-  const [naziv,setNaziv] = React.useState();
+  const [naziv,setNaziv] = React.useState<string>();
   const descriptionElementRef = React.useRef<HTMLElement>(null);
  
   const [scroll, setScroll] = React.useState<DialogProps['scroll']>('paper');
