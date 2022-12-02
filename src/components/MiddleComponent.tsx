@@ -16,8 +16,8 @@ import {
   DialogActions,
 } from '@mui/material';
 import React from 'react';
-import Link from 'next/link';
 import useSWR from 'swr';
+import { useEffect } from 'react';
 
 const fetcher = (url: any) => fetch(url).then((res) => res.json());
 
@@ -29,19 +29,13 @@ export interface Objekt {
 }
 
 export default function MiddleComponent() {
-  const { data, error } = useSWR('/api/staticdata', fetcher);
-
-  if (error) return <div>Failed to load</div>;
-  //Handle the loading state
-  if (!data) return <div></div>;
-
-  const drinks: any = JSON.parse(data);
-
-  const [naziv,setNaziv] = React.useState("");
   const [open, setOpen] = React.useState(false);
+  const [naziv,setNaziv] = React.useState();
   const descriptionElementRef = React.useRef<HTMLElement>(null);
-  const [jsoninfo,setjsoninfo] = React.useState(drinks.food);
-  React.useEffect(() => {
+ 
+  const [scroll, setScroll] = React.useState<DialogProps['scroll']>('paper');
+
+useEffect(() => {
     if (open) {
       const { current: descriptionElement } = descriptionElementRef;
       if (descriptionElement !== null) {
@@ -50,8 +44,16 @@ export default function MiddleComponent() {
     }
   }, [open]);
 
-  const [scroll, setScroll] = React.useState<DialogProps['scroll']>('paper');
+  const { data, error } = useSWR('/api/staticdata', fetcher);
 
+  if (error) return <div>Failed to load</div>;
+  //Handle the loading state
+  if (!data) return <div></div>;
+
+  const drinks: any = JSON.parse(data);
+  // const [jsoninfo,setjsoninfo] = React.useState(drinks.food);
+
+ 
   function handleClick(
     item:
       | {
