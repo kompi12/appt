@@ -89,7 +89,7 @@ useEffect(() => {
           featured?: undefined;
         }
   ) {
-    setNaziv(item.title)
+    // setNaziv(item.title)
     console.log('As');
     setOpen(true);
   }
@@ -199,7 +199,7 @@ useEffect(() => {
           aria-labelledby='scroll-dialog-title'
           aria-describedby='scroll-dialog-description'
         >
-          <DialogTitle id='scroll-dialog-title'>{naziv}</DialogTitle>
+          <DialogTitle id='scroll-dialog-title'></DialogTitle>
           <DialogContent dividers={scroll === 'paper'}>
             <DialogContentText
               id='scroll-dialog-description'
