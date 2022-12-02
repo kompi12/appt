@@ -30,7 +30,7 @@ export interface Objekt {
 
 export default function MiddleComponent() {
   const [open, setOpen] = React.useState(false);
-  const [naziv,setNaziv] = React.useState<string>();
+  const [naziv,setNaziv] = React.useState<any>();
   const descriptionElementRef = React.useRef<HTMLElement>(null);
  
   const [scroll, setScroll] = React.useState<DialogProps['scroll']>('paper');
@@ -89,7 +89,7 @@ useEffect(() => {
           featured?: undefined;
         }
   ) {
-    // setNaziv(item.title)
+    setNaziv(item.title)
     console.log('As');
     setOpen(true);
   }
@@ -199,7 +199,7 @@ useEffect(() => {
           aria-labelledby='scroll-dialog-title'
           aria-describedby='scroll-dialog-description'
         >
-          <DialogTitle id='scroll-dialog-title'></DialogTitle>
+          <DialogTitle id='scroll-dialog-title'>{naziv}</DialogTitle>
           <DialogContent dividers={scroll === 'paper'}>
             <DialogContentText
               id='scroll-dialog-description'
