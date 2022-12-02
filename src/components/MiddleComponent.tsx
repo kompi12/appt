@@ -212,8 +212,8 @@ useEffect(() => {
             return (<>
                 
               <div className='m-3 flex flex-col text-left justify-start'>
-               <div className='flex flex-row'> <div className='mr-3'>{element.naziv}</div> <div>{element.cijenaE}</div> </div>
-                <div>{element.opis}</div>
+               <div className='flex flex-row'> <div className='mr-3'>{element.naziv}</div> <div>{element.cijenaKn}</div> </div>
+               
               </div></>
             );
           });
