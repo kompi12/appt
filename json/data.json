@@ -1,0 +1,44 @@
+{
+    "drinks":[
+       {
+          "naziv":"value1",
+          "cijenaKn":"123",
+          "cijenaE":"value3",
+          "opis":"value"
+       },
+       {
+          "naziv":"valu1",
+          "cijenaKn":"321",
+          "cijenaE":"lue3",
+          "opis":"value"
+       }
+    ],
+    "food" : [
+      {
+         "naziv":"jedan",
+         "cijenaKn":"123",
+         "cijenaE":"value3",
+         "opis":"value"
+      },
+      {
+         "naziv":"dva",
+         "cijenaKn":"321",
+         "cijenaE":"lue3",
+         "opis":"value"
+      }
+   ],
+   "wine": [
+      {
+         "naziv":"tri",
+         "cijenaKn":"123",
+         "cijenaE":"value3",
+         "opis":"value"
+      },
+      {
+         "naziv":"cetiri",
+         "cijenaKn":"321",
+         "cijenaE":"lue3",
+         "opis":"value"
+      }
+   ]
+ }
